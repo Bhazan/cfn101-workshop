@@ -43,3 +43,7 @@ Resources:
       AvailabilityZone: !GetAtt EC2Instance.AvailabilityZone
       Encrypted: true
     Condition: IsProduction
+Outputs:
+  VolumeId:
+    Value: !GetAtt Volume.VolumeId
+    Condition: IsProduction
